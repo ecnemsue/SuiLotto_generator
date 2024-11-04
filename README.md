@@ -1,6 +1,6 @@
 A reference distribution for the output is here
 <code>  
-  Special balls result:\n
+  Special balls result:
   
   0       :  0.10227874933757286 
   1       :  0.10492845786963434 
