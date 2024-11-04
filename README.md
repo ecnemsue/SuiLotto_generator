@@ -12,7 +12,10 @@ A reference distribution for the output is here
   7       :  0.08956014838367779
   8       :  0.08956014838367779
   9       :  0.0996290408055114
-  Normal balls result:
+  
+
+
+Normal balls result:
   
   0       :  0.0277980218636127
   1       :  0.028735033836543467
