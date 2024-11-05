@@ -3,7 +3,7 @@ import {setTimeout} from 'timers/promises';
 
 
 let res=[];
-const init_round=12624987;
+const init_round=12653804;
 
 
 async function get_key(round: num=0){
@@ -84,24 +84,25 @@ function select_numbers(arg1)  {
 
 
 
+
 let j=0;
 let i=0;
 let dist=[];
 let dist_sp=[]
-while(j<20)
-let init_round_t=init_round+j;
+while(j<20){
+	let init_round_t=init_round+j;
 	while(i<333){
-	i+=1;
-	let round=init_round_t-(i*28800);
-	let sig=await get_key(round);
-	let byteArray = hex16String2Vector(sig);
-	let [out_num,out_snum]=select_numbers(byteArray);
-	console.log(out_num,out_snum);
-	dist=dist.concat(out_num);
-	dist_sp=dist_sp.concat([out_snum]);
-	await setTimeout(1500);
+		let round=init_round_t-(i*28800);
+		let sig=await get_key(round);
+		let byteArray = hex16String2Vector(sig);
+		let [out_num,out_snum]=select_numbers(byteArray);
+		console.log(out_num,out_snum);
+		dist=dist.concat(out_num);
+		dist_sp=dist_sp.concat([out_snum]);
+		await setTimeout(1500);
+		i+=1;
 	}
-j+=1;
+	j+=1;
 }
 
 console.dir(dist, {depth: null, colors: true, maxArrayLength: null});
